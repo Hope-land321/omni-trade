@@ -1,0 +1,10 @@
+fastapi[all]
+sqlmodel
+alembic
+asyncpg
+redis
+python-jose[cryptography]
+passlib[bcrypt]
+pydantic-settings
+python-multipart
+celery
