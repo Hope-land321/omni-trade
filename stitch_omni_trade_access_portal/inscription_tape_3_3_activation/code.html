@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#272a2c",
+                    "on-primary-fixed-variant": "#004395",
+                    "inverse-primary": "#005ac2",
+                    "error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#414658",
+                    "primary-container": "#4d8eff",
+                    "on-primary-container": "#00285d",
+                    "tertiary-container": "#8691a7",
+                    "outline": "#8c909f",
+                    "surface-container-highest": "#323537",
+                    "surface-container-low": "#191c1e",
+                    "error": "#ffb4ab",
+                    "inverse-on-surface": "#2d3133",
+                    "on-surface": "#e0e3e5",
+                    "primary-fixed": "#d8e2ff",
+                    "surface-tint": "#adc6ff",
+                    "on-primary-fixed": "#001a42",
+                    "outline-variant": "#424754",
+                    "on-error": "#690005",
+                    "on-background": "#e0e3e5",
+                    "tertiary": "#bcc7de",
+                    "surface-container-lowest": "#0b0f10",
+                    "surface-bright": "#363a3b",
+                    "secondary": "#c2c6db",
+                    "on-secondary-fixed": "#161b2b",
+                    "on-tertiary-fixed-variant": "#3c475a",
+                    "on-surface-variant": "#c2c6d6",
+                    "primary-fixed-dim": "#adc6ff",
+                    "inverse-surface": "#e0e3e5",
+                    "on-primary": "#002e6a",
+                    "secondary-fixed": "#dee1f7",
+                    "on-secondary": "#2b3040",
+                    "tertiary-fixed-dim": "#bcc7de",
+                    "surface": "#101415",
+                    "tertiary-fixed": "#d8e3fb",
+                    "surface-variant": "#323537",
+                    "on-secondary-container": "#b0b4c9",
+                    "on-error-container": "#ffdad6",
+                    "surface-container": "#1d2022",
+                    "secondary-fixed-dim": "#c2c6db",
+                    "secondary-container": "#414658",
+                    "surface-dim": "#101415",
+                    "on-tertiary": "#263143",
+                    "on-tertiary-container": "#1f2a3c",
+                    "background": "#101415",
+                    "on-tertiary-fixed": "#111c2d",
+                    "primary": "#adc6ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "lg": "2rem",
+                    "container-max": "1440px",
+                    "base": "4px",
+                    "md": "1.5rem",
+                    "sm": "1rem",
+                    "xs": "0.5rem",
+                    "xl": "3rem",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "h1": ["Manrope"],
+                    "h3": ["Manrope"],
+                    "h2": ["Manrope"],
+                    "label-caps": ["Inter"],
+                    "data-mono": ["Space Grotesk"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "data-mono": ["14px", {"lineHeight": "1", "letterSpacing": "0", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .electric-glow {
+            box-shadow: 0px 0px 15px rgba(173, 198, 255, 0.3);
+        }
+        .otp-input:focus {
+            box-shadow: inset 0 0 10px rgba(173, 198, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col items-center justify-center p-gutter selection:bg-primary selection:text-on-primary">
+<!-- Progress Tracker Container -->
+<div class="w-full max-w-lg mb-xl">
+<div class="flex items-center justify-between mb-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Étape 3 sur 3</span>
+<span class="font-label-caps text-label-caps text-primary">Activation du compte</span>
+</div>
+<div class="h-1 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-full transition-all duration-1000"></div>
+</div>
+</div>
+<!-- Main Content Canvas -->
+<main class="w-full max-w-xl">
+<div class="glass-card rounded-xl p-xl flex flex-col items-center text-center space-y-md">
+<!-- Success/Activation Visual Anchor -->
+<div class="relative w-24 h-24 flex items-center justify-center rounded-full bg-primary/10 border border-primary/20 electric-glow">
+<span class="material-symbols-outlined text-[48px] text-primary" data-icon="mark_email_read">
+                    mark_email_read
+                </span>
+<div class="absolute -bottom-1 -right-1 bg-primary text-on-primary p-xs rounded-full border-4 border-surface">
+<span class="material-symbols-outlined text-[16px] block" data-icon="check" style="font-variation-settings: 'FILL' 1;">
+                        check
+                    </span>
+</div>
+</div>
+<!-- Header Section -->
+<div class="space-y-xs">
+<h1 class="font-h2 text-h2 text-on-surface">Vérifiez votre email</h1>
+<p class="text-on-surface-variant max-w-sm mx-auto">
+                    Nous avons envoyé un code d'activation à <span class="text-on-surface font-medium underline decoration-primary/30">user@example.com</span>. Entrez les 6 chiffres pour continuer.
+                </p>
+</div>
+<!-- OTP Activation Form -->
+<form class="w-full max-w-md space-y-lg pt-sm">
+<div class="flex justify-between gap-xs md:gap-sm">
+<!-- Standard 6-digit input layout -->
+<input class="otp-input w-12 h-16 md:w-16 md:h-20 text-center text-h3 font-data-mono bg-[#0F172A] border-outline-variant rounded-lg focus:border-primary focus:ring-0 transition-all text-primary" maxlength="1" placeholder="·" type="text"/>
+<input class="otp-input w-12 h-16 md:w-16 md:h-20 text-center text-h3 font-data-mono bg-[#0F172A] border-outline-variant rounded-lg focus:border-primary focus:ring-0 transition-all text-primary" maxlength="1" placeholder="·" type="text"/>
+<input class="otp-input w-12 h-16 md:w-16 md:h-20 text-center text-h3 font-data-mono bg-[#0F172A] border-outline-variant rounded-lg focus:border-primary focus:ring-0 transition-all text-primary" maxlength="1" placeholder="·" type="text"/>
+<input class="otp-input w-12 h-16 md:w-16 md:h-20 text-center text-h3 font-data-mono bg-[#0F172A] border-outline-variant rounded-lg focus:border-primary focus:ring-0 transition-all text-primary" maxlength="1" placeholder="·" type="text"/>
+<input class="otp-input w-12 h-16 md:w-16 md:h-20 text-center text-h3 font-data-mono bg-[#0F172A] border-outline-variant rounded-lg focus:border-primary focus:ring-0 transition-all text-primary" maxlength="1" placeholder="·" type="text"/>
+<input class="otp-input w-12 h-16 md:w-16 md:h-20 text-center text-h3 font-data-mono bg-[#0F172A] border-outline-variant rounded-lg focus:border-primary focus:ring-0 transition-all text-primary" maxlength="1" placeholder="·" type="text"/>
+</div>
+<div class="flex flex-col gap-sm">
+<button class="w-full py-md bg-primary text-on-primary font-label-caps text-label-caps rounded-lg electric-glow hover:bg-primary-container transition-all duration-200 active:scale-95" type="submit">
+                        Activer mon compte
+                    </button>
+<button class="group flex items-center justify-center gap-xs py-sm text-on-surface-variant hover:text-primary transition-colors duration-200" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="refresh">refresh</span>
+<span class="font-label-caps text-label-caps">Renvoyer le code</span>
+</button>
+</div>
+</form>
+<!-- Supplemental Info / Support -->
+<div class="pt-md border-t border-white/5 w-full">
+<div class="flex items-center justify-center gap-sm">
+<div class="flex -space-x-2">
+<img alt="Support" class="w-8 h-8 rounded-full border-2 border-surface" data-alt="Close-up portrait of a professional customer support representative with a friendly smile, set against a blurred high-tech office background with soft blue ambient lighting. The visual style is crisp and modern, reflecting trust and premium service in a dark mode UI environment. Lighting is cinematic and focused, emphasizing clarity and reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQArXF899hcfzbdvWm3dqWOjEt2HmYIvzQq9S8chAnOLfGxqSKYZUL4ePgvK6e5lYye3Q7ohgbSRXMMxh3p7c39q2DVRQZVnKfRV1TSthLtgNOD0pOA3q4H5JrtxpuGR67kUxyug_H_cA2bpARAANIaKjr4unBkoRmTjgbYEX1I6UKcMPBC_i_N2HXab4_34xB5NIn4XSU9a1BOXtWj2fzLNhNf-7iG_2nuYiw6oVerySTT1JsIdIUBFLpEbiJiQAqNHKdct3cHQ"/>
+<img alt="Support" class="w-8 h-8 rounded-full border-2 border-surface" data-alt="Portrait of a diverse technology consultant in a professional setting, featuring low-key lighting and electric blue highlights that match the financial platform's color palette. The subject is calm and confident, looking directly at the camera. The aesthetic is sophisticated and technologically advanced, suitable for a high-end SaaS platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYHSV_5VyHP8Arg9hx_JYoYzP1Z8Lkqm1S3kI101Zd7FBJGz4xWNyqGpt6Zr1TwoJE3lzpEzM553xltyWSqnfL0bmBu2cr7P_V9CcyHgJBV-43szWDSiH9ZR999nDRZ4Ku0D49OXb8S9uda0MC0iTVCbz8mmokU1fSQoVpl_Qhf6qbddiYAjdr1Jd0-hjxAhvXAoh3i2RQnLB5ynjQzfD85Fs_XaXRaaOjuCHn3DF8DquoO3iM7-ZQt_3iUfh2KihaAZrvWs4wvg"/>
+</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">
+                        Besoin d'aide ? <a class="text-primary hover:underline decoration-primary/40" href="#">Contactez le support</a>
+</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Background Decoration Elements (Asymmetric Layout Support) -->
+<div class="fixed top-0 left-0 -z-10 w-full h-full overflow-hidden pointer-events-none opacity-20">
+<div class="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px]"></div>
+<div class="absolute bottom-[20%] right-[5%] w-[30%] h-[30%] rounded-full bg-on-primary-fixed-variant/10 blur-[100px]"></div>
+</div>
+</body></html>
